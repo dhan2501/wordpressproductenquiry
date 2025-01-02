@@ -38,13 +38,18 @@
         // Add the post title as the last breadcrumb
         $breadcrumb .= '<li class="breadcrumb-item">' . get_the_title() . '</li>';
     }
-    elseif(!is_front_page($post->post_parent)){
-        $breadcrumb .= '<li class="breadcrumb-item">' . get_the_title() . '</li>';
+    // elseif(!is_front_page($post->post_parent)){
+    //     $breadcrumb .= '<li class="breadcrumb-item">' . get_the_title() . '</li>';
+    // }
+    elseif (is_tax('product_category')){
+        $term = get_queried_object();
+        $breadcrumb .= '<li class="breadcrumb-item">' .  $term->name . '</li>';
     }
     else {
-        $termscat = get_the_terms($post->ID, 'product_category');
+        // $termscat = get_the_terms($post->ID, 'product_category');
         // print_r( $termscat);
-        $breadcrumb .= '<li class="breadcrumb-item">'. $termscat[0]->name . '</li>';
+        // $breadcrumb .= '<li class="breadcrumb-item">'. $termscat[0]->name . '</li>';
+        $breadcrumb .= '<li class="breadcrumb-item">'. get_the_title() . '</li>';
        
      }              
     // Close the breadcrumb structure

@@ -6,11 +6,12 @@ get_header();
  <?php //custom_product_breadcrumbs(); // Display the breadcrumbs ?>
  <?php echo do_shortcode('[breadcrumbs]'); ?>
 <div class="container">
-    <h1><?php the_title(); ?></h1>
+    <!-- <h1><?php the_title(); ?></h1> -->
     <div class="row">
         <div class="col-md-3">    
          <!-- Category Filter Buttons -->
             <div id="category-filter">
+                <h5>Product Categories</h5>
                 <?php
                     // $terms = get_terms('product_category');
                     // if ($terms && !is_wp_error($terms)) :
@@ -24,10 +25,12 @@ get_header();
                 ?>
             </div>
             <div class="tags">
+                <h5>Product Tags</h5>
                 <?php echo do_shortcode('[product-custom-tags]'); ?>
             </div>
         </div>
         <div class="col-md-9"> 
+            <div class="row">
             <div class="productlist">
             
                 <?php
@@ -55,12 +58,18 @@ get_header();
                 <?php
                     while ($query->have_posts()) : $query->the_post();
                 ?>
-                <?php get_template_part( 'template-parts/content/content-products'); ?>
-            </div>
-        </div>
+                <div class="col-md-4 float-left mb-3 d-flex align-items-stretch">
+                    <?php get_template_part( 'template-parts/content/content-products'); ?>
+                </div>
+            
                 <?php
                     endwhile;
                   // Pagination
+                  ?>
+                  </div>
+            </div>
+                  
+                  <?php
                     $pagination_args = array(
                         'total' => $query->max_num_pages,
                         'current' => $paged,
@@ -71,6 +80,7 @@ get_header();
 
         else :
             echo '<p>No books found.</p>';
+
         endif;
 
 // Reset post data

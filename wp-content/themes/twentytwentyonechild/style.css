@@ -247,8 +247,19 @@ a.next.page-numbers {
 span.page-numbers.current {
   color: #c3784f;
   padding: 10px;
-  letter-spacing: 10px;
 }
 .page-numbers {
   padding: 10px;
+}
+.productlist {
+  margin: 0 0 40px 0;
+}
+
+a.prev.page-numbers {
+  color: #fff;
+  background: #f36c23 !important;
+  padding: 10px;
+}
+ul.product-categories {
+  padding: 0;
 }
