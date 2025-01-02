@@ -406,9 +406,9 @@ function category_get_shortcode()
        
         echo '<ul class="product-categories">'; 
         $active_class = $is_shop_page ? 'active' : '';
-echo '<li class="' . esc_attr($active_class) . '">';
-echo '<a href="'.site_url().'/products">All Products</a>';
-echo '</li>';
+        echo '<li class="' . esc_attr($active_class) . '">';
+        echo '<a href="'.site_url().'/products">All Products</a>';
+        echo '</li>';
         foreach ($terms as $term) :
             $active_class = ($current_term_id == $term->term_id) ? 'active' : '';
             echo '<li class="' . $active_class . '"><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';

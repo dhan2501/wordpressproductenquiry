@@ -33,9 +33,9 @@ get_header();
                     echo do_shortcode('[category_shortcode]');
                 ?>
             </div>
-            <div class="tags">
-            <h5>Product Tags</h5>
-                <?php echo do_shortcode('[product-custom-tags]'); ?>
+            <!-- <div class="tags">
+            <h5>Product Tags</h5> -->
+                <?php //echo do_shortcode('[product-custom-tags]'); ?>
                 <?php
                     // Start the loop for products on the category page
                     // if ( have_posts() ) :
@@ -64,7 +64,7 @@ get_header();
                     //     echo 'No products found.';
                     // endif;
                 ?>
-            </div>
+            <!-- </div> -->
     </div>
         <div class="col-md-9">
             <h1 class="page-title text-center text-uppercase">

@@ -292,3 +292,6 @@ ul.product-tags-list li {
 .pagination nav .current {
   color: #fff !important;
 }
+.paginationstyle {
+  text-align: center;
+}
