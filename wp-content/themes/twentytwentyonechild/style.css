@@ -63,6 +63,9 @@ ul.product-categories li {
 .product-tags-list li {
   display: inline-block;
   margin-right: 10px;
+  width: 30%;
+  padding: 10px;
+  background: #48b6c7;
 }
 
 .product-tags-list a {
@@ -262,4 +265,30 @@ a.prev.page-numbers {
 }
 ul.product-categories {
   padding: 0;
+}
+
+ul.product-categories li.active {
+  background: #17a2b8c9;
+  padding: 10px;
+  border-radius: 2px;
+}
+.product-categories li.active a {
+  color: #fff;
+}
+ul.product-categories li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+ul.product-categories li {
+  padding: 10px 0 10px 0;
+}
+ul.product-tags-list li {
+  text-transform: capitalize;
+}
+
+.pagination nav .current {
+  color: #fff !important;
 }

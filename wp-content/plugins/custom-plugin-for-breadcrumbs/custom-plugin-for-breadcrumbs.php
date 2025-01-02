@@ -45,6 +45,10 @@
         $term = get_queried_object();
         $breadcrumb .= '<li class="breadcrumb-item">' .  $term->name . '</li>';
     }
+    elseif (is_post_type_archive('blog')){
+        $term = get_queried_object();
+        $breadcrumb .= '<li class="breadcrumb-item"> Blog </li>';
+    }
     else {
         // $termscat = get_the_terms($post->ID, 'product_category');
         // print_r( $termscat);

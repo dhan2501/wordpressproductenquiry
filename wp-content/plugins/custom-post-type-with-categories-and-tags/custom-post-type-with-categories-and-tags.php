@@ -397,10 +397,21 @@ function category_get_shortcode()
 {
 
     $terms = get_terms('product_category');
+    $current_term_id = get_queried_object_id();
+    $is_shop_page = is_page('products');
+    // print_r($is_shop_page );
+// $posts_page_url = get_permalink($is_shop_page);
+//     print_r($posts_page_url );
     if ($terms && !is_wp_error($terms)) :
-        echo '<ul class="product-categories">';
+       
+        echo '<ul class="product-categories">'; 
+        $active_class = $is_shop_page ? 'active' : '';
+echo '<li class="' . esc_attr($active_class) . '">';
+echo '<a href="'.site_url().'/products">All Products</a>';
+echo '</li>';
         foreach ($terms as $term) :
-            echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+            $active_class = ($current_term_id == $term->term_id) ? 'active' : '';
+            echo '<li class="' . $active_class . '"><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
         endforeach;
         echo '</ul>';
     endif;

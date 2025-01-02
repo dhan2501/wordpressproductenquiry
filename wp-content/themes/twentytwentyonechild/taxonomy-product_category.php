@@ -19,7 +19,8 @@ get_header();
 <div class="row">
     <div class="col-md-3">
     <div id="category-filter">
-    <h5>Product Categories</h5>
+    <h5 class="mb-4">Product Categories</h5>
+    <div class="borderbottom"></div>
                 <?php
                     // $terms = get_terms('product_category');
                     // if ($terms && !is_wp_error($terms)) :
@@ -66,7 +67,7 @@ get_header();
             </div>
     </div>
         <div class="col-md-9">
-            <h1 class="page-title">
+            <h1 class="page-title text-center text-uppercase">
                 <?php single_term_title(); // Display the category name ?>
             </h1>
             <?php if (have_posts()) : ?>

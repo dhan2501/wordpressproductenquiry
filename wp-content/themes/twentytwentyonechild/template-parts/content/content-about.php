@@ -6,3 +6,5 @@ if( !empty( $image ) ): ?>
 </div>
 <?php endif; ?>
 
+<?php echo do_shortcode('[breadcrumbs]'); ?>
+

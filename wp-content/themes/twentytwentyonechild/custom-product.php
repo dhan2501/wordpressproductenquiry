@@ -24,10 +24,10 @@ get_header();
                     echo do_shortcode('[category_shortcode]');
                 ?>
             </div>
-            <div class="tags">
+            <!-- <div class="tags">
                 <h5>Product Tags</h5>
                 <?php echo do_shortcode('[product-custom-tags]'); ?>
-            </div>
+            </div> -->
         </div>
         <div class="col-md-9"> 
             <div class="row">

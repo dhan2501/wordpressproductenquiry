@@ -17,7 +17,7 @@
   <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<?= site_url();  ?>">
     <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
       $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
       // print_r($image);
