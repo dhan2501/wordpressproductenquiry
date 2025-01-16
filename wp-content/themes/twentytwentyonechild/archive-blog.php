@@ -16,6 +16,7 @@
                                 <div class="col md-3">
 
                                 <div class="card" style="width: 18rem;">
+                                    <a href="<?php the_permalink(); ?>">
                                 <?php
                                     $thumbnail_id = get_post_thumbnail_id( get_the_ID() ); // Get the featured image ID
 
@@ -32,7 +33,7 @@
 
 
                                 ?>
-
+                                </a>
 
 
 
@@ -41,7 +42,7 @@
                                                 <div class="card-body">
                                                     <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></h5>
                                                     <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                                                    <a href="#" class="btn btn-primary">Read More</a>
+                                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
                                                 </div>
                                                 </div>                            
 

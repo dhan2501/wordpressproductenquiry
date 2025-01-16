@@ -10,7 +10,7 @@ while ( have_posts() ) :
    
 	elseif(is_page('contact-us')):
     
-        get_template_part( 'template-parts/content/content-contactus' ); 
+        get_template_part( 'template-parts/content/content-contact' ); 
         
     elseif(is_page('blog')):    
         get_template_part( 'template-parts/content/content-blog' ); 
